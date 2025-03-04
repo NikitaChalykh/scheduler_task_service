@@ -20,6 +20,7 @@
 * Python 3.12.3
 * SQLAlchemy 2.0.38
 * alembic 1.14.1
+* pydantic 2.10.6
 * Postgres 15.2
 * Redis 7.2.0
 * Docker, Docker Compose
