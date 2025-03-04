@@ -1,0 +1,10 @@
+/.idea/*
+/scheduler/__pycache__/
+/scheduler/*/__pycache__/
+/env/
+/venv/
+/dist/
+pylintrc
+infra/.env
+/wheelhouse/
+/alembic/versions/
