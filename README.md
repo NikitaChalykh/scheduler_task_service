@@ -29,7 +29,7 @@
 ----------
 1. Клонирование репозитория:
 ```bash 
-git clone git@github.com:NikitaChalykh/Scheduler_Task_Service.git
+git clone git@github.com:NikitaChalykh/scheduler_task_service.git
 
 cd scheduler_task_service # Переходим в директорию с проектом
 ```
