@@ -22,7 +22,7 @@
 * alembic 1.14.1
 * Postgres 15.2
 * Redis 7.2.0
-* Docker
+* Docker, Docker Compose
 
 Установка проекта из репозитория
 ----------
