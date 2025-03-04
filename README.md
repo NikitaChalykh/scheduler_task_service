@@ -34,7 +34,7 @@ git clone git@github.com:NikitaChalykh/scheduler_task_service.git
 cd scheduler_task_service # Переходим в директорию с проектом
 ```
 
-2. Создайте файл ```.env``` используя ```.env.example``` в качестве шаблона
+2. Создайте файл ```.env``` используя ```env.example``` в качестве шаблона
 
 3. Установка и запуск сервиса в контейнере:
 ```bash 
