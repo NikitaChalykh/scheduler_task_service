@@ -30,7 +30,7 @@
 ```bash 
 git clone git@github.com:NikitaChalykh/Scheduler_Task_Service.git
 
-cd Scheduler_Task_Service # Переходим в директорию с проектом
+cd scheduler_task_service # Переходим в директорию с проектом
 ```
 
 2. Создайте файл ```.env``` используя ```.env.example``` в качестве шаблона
