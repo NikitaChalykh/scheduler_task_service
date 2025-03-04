@@ -28,9 +28,9 @@
 ----------
 1. Клонирование репозитория:
 ```bash 
-git clone git@github.com/NikitaChalykh/Scheduler.git
+git clone git@github.com:NikitaChalykh/Scheduler_Task_Service.git
 
-cd scheduler/infra # Переходим в директорию с инфраструктурой
+cd scheduler/infra # Переходим в директорию с проектом
 ```
 
 2. Создайте файл ```.env``` используя ```.env.example``` в качестве шаблона
