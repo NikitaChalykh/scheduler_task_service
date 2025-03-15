@@ -43,9 +43,9 @@ cd scheduler_task_service # Go to the directory with the project
 
 3. Installing and running the service in a container:
 ```bash
-docker-compose up -d # To run one worker
+docker compose up -d # To run one worker
 
-docker-compose up --scale scheduler=2 -d # To run multiple workers (e.g. two)
+docker compose up --scale scheduler=2 -d # To run multiple workers (e.g. two)
 ```
 
 4. Viewing logs:
