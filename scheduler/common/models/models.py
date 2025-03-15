@@ -7,7 +7,7 @@ from common.models.base_models import BaseModel
 
 class LogType(BaseModel):
     """
-    Таблица типов логов журнала инцидентов и происшествий.
+    Table of log types for the incident and accident log.
     """
 
     __tablename__ = "log_types"
@@ -17,7 +17,7 @@ class LogType(BaseModel):
     @classmethod
     async def get_unique(cls, session: AsyncSession, data: dict) -> BaseModel | None:
         """
-        Получение объекта по уникальным параметрам.
+        Retrieving an object by unique parameters.
         """
 
         stm = select(cls).where(cls.name == data["name"])
@@ -28,7 +28,7 @@ class LogType(BaseModel):
 
 class Log(BaseModel):
     """
-    Таблица логов журнала инцидентов и происшествий.
+    Table of logs for the incident and accident log.
     """
 
     __tablename__ = "logs"
@@ -40,7 +40,7 @@ class Log(BaseModel):
 
 class Task(BaseModel):
     """
-    Таблица с задачами для шедулера.
+    Table with tasks for the scheduler.
     """
 
     __tablename__ = "tasks"
@@ -52,7 +52,7 @@ class Task(BaseModel):
     @classmethod
     async def get_unique(cls, session: AsyncSession, data: dict) -> BaseModel | None:
         """
-        Получение объекта по уникальным параметрам.
+        Retrieving an object by unique parameters.
         """
 
         stm = select(cls).where(cls.name == data["name"])
@@ -63,7 +63,7 @@ class Task(BaseModel):
 
 class TaskHistoryStatus(BaseModel):
     """
-    Таблица статусов для истории выполнения задач.
+    Table of statuses for task execution history.
     """
 
     __tablename__ = "task_history_statuses"
@@ -73,7 +73,7 @@ class TaskHistoryStatus(BaseModel):
     @classmethod
     async def get_unique(cls, session: AsyncSession, data: dict) -> BaseModel | None:
         """
-        Получение объекта по уникальным параметрам.
+        Retrieving an object by unique parameters.
         """
 
         stm = select(cls).where(cls.name == data["name"])
@@ -84,7 +84,7 @@ class TaskHistoryStatus(BaseModel):
 
 class TaskHistory(BaseModel):
     """
-    Таблица с историей запуска задач.
+    Table with task execution history.
     """
 
     __tablename__ = "task_history"

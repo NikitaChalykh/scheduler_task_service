@@ -4,7 +4,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class DBSettings(BaseSettings):
     """
-    Настройки БД.
+    DB settings.
     """
 
     host: str = Field("localhost", alias="POSTGRES_HOST")
@@ -39,7 +39,7 @@ class DBSettings(BaseSettings):
 
 class RedisSettings(BaseSettings):
     """
-    Настройки redis.
+    Redis settings.
     """
 
     host: str = Field("localhost", alias="REDIS_HOST")
@@ -50,7 +50,7 @@ class RedisSettings(BaseSettings):
 
 class ServerSettings(BaseSettings):
     """
-    Настройки scheduler.
+    Scheduler settings.
     """
 
     scheduler_base_delay: int = Field(300, env="SCHEDULER_BASE_DELAY")

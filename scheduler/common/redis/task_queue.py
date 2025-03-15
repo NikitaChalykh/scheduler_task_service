@@ -3,12 +3,12 @@ from common.redis.redis_connection import RedisConnection
 
 class TaskQueue(RedisConnection):
     """
-    Класс взаимодействия с упорядоченной очередью задач в redis.
+    Redis ordered task queue interaction class.
     """
 
     def __init__(self, queue_name: str) -> None:
         """
-        Инициализация класса взаимодействия с упорядоченной очередью задач в redis.
+        Initialize the redis ordered task queue interaction class.
         """
 
         super().__init__()
@@ -16,14 +16,14 @@ class TaskQueue(RedisConnection):
 
     async def get_all_tasks_from_queue(self) -> list[str]:
         """
-        Получения списка всех задач в очереди.
+        Get a list of all tasks in the queue.
         """
 
         return await self.redis_connect.zrange(self.queue_name, 0, -1)
 
     async def pop_next_task_from_queue(self) -> tuple:
         """
-        Взятие следующей задачи из очереди по приоритету.
+        Take the next task from the queue by priority.
         """
 
         next_task_data = await self.redis_connect.zpopmin(self.queue_name)
@@ -36,7 +36,7 @@ class TaskQueue(RedisConnection):
 
     async def add_task_to_queue(self, task_name: str, task_launch: float) -> None:
         """
-        Добавление задачи в очередь или обновление времени выполнения существующей задачи в очереди.
+        Add a task to the queue or update the execution time of an existing task in the queue.
         """
 
         task_data = {task_name: task_launch}

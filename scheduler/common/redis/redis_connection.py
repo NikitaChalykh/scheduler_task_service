@@ -5,12 +5,12 @@ from common import redis_config
 
 class RedisConnection:
     """
-    Базовый класс асинхронного взаимодействия с redis.
+    Base class for asynchronous interaction with redis.
     """
 
     def __init__(self) -> None:
         """
-        Инициализация базового класса подключения к redis.
+        Initialization of the base class for connecting to redis.
         """
 
         redis_connect = asyncio_redis.client.Redis(

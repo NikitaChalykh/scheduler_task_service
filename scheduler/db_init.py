@@ -1,4 +1,3 @@
-# Инициализации БД начальными данными
 import logging
 import asyncio
 
@@ -13,7 +12,7 @@ logger = logging.getLogger(__name__)
 
 async def db_init(session: AsyncSession):
     """
-    Инициализация БД начальными значениями.
+    Initialization of the database with initial values.
     """
 
     logger.info("Create dictionary: incident log types")
@@ -52,7 +51,7 @@ async def db_init(session: AsyncSession):
 
 async def async_main() -> None:
     """
-    Метод инициализации БД данными с логированием.
+    Method of initialization of the database with data with logging.
     """
 
     async with async_session() as session:

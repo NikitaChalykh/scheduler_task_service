@@ -10,7 +10,7 @@ async_session = async_sessionmaker(engine, expire_on_commit=False)
 
 async def get_session() -> AsyncGenerator:
     """
-    Инициализация асинхронной сессии к БД.
+    Initializing an asynchronous session to the DB.
     """
 
     async with async_session() as session:

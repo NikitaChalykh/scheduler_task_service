@@ -11,7 +11,7 @@ Base = declarative_base()
 
 class BaseModel(Base):
     """
-    Базовый класс моделей ORM.
+    Base class of ORM models.
     """
 
     __abstract__ = True
@@ -21,7 +21,7 @@ class BaseModel(Base):
     @classmethod
     async def get_all(cls, session: AsyncSession) -> Sequence[Base]:
         """
-        Возвращает все записи.
+        Returns all records.
         """
 
         stm = await session.execute(
@@ -32,14 +32,14 @@ class BaseModel(Base):
     @classmethod
     async def get_unique(cls, session: AsyncSession, data: dict) -> Base | None:
         """
-        Получение объекта по уникальным параметрам. Для каждой модели свои параметры.
+        Getting an object by unique parameters. Each model has its own parameters.
         """
         pass
 
     @classmethod
     async def obj_set(cls, session: AsyncSession, data: dict) -> uuid.UUID | Column:
         """
-        Метод создает записей, если ее нет.
+        The method creates records if there are none.
         """
 
         obj = await cls.get_unique(session=session, data=data)
